@@ -1,14 +1,11 @@
 const express = require('express');
-const cookieParser = require('cookie-parser');
 const cors = require('cors');
 const path = require('path');
 
 const app = express();
 const http = require('http').createServer(app);
 
-//TODO: when we finish - delete cookies stuff if we don't need them
 // Express App Config
-app.use(cookieParser());
 app.use(express.json());
 
 if (process.env.NODE_ENV === 'production') {
